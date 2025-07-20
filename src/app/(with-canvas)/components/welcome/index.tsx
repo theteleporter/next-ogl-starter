@@ -73,7 +73,7 @@ export const Welcome = () => {
         <h3 className="mt-8 font-semibold mb-4 text-lg">Credits</h3>
         <div className="p-5 bg-gray/50 rounded-[var(--rounded-lg)] border border-[var(--color-gray-lighter)]">
           <p>
-            From {" "}
+            From{" "}
             <a
               href="https://theteleporter.site"
               target="_blank"

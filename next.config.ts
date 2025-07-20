@@ -1,48 +1,47 @@
-import withBundleAnalyzer from "@next/bundle-analyzer"
-import withTM from "next-transpile-modules"
+import withBundleAnalyzer from '@next/bundle-analyzer'
+import withTM from 'next-transpile-modules'
+import type { NextConfig } from 'next'
+import type { WebpackConfigContext } from 'next/dist/server/config-shared'
 
-/**
- * @type {import('next').NextConfig}
- */
-const config = {
+const baseConfig: NextConfig = {
+  reactStrictMode: true,
+
+  // fallback for Webpack 
+  webpack: (config: WebpackConfigContext['config'], _options: WebpackConfigContext) => {
+    config.module.rules.push({
+      test: /\.(glsl|vs|fs|vert|frag)$/,
+      use: ['raw-loader', 'glslify-loader']
+    })
+
+    return config
+  },
+
+  // optional Turbopack custom rules
   turbopack: {
     rules: {
-      '*.glsl': {
-        loaders: [
-          { loader: 'raw-loader' }
-        ],
-        as: '*.js',
+      '.glsl': {
+        as: 'js',
+        loaders: ['raw-loader', 'glslify-loader']
       },
-      '*.vs': {
-        loaders: [
-          { loader: 'raw-loader' }
-        ],
-        as loader: 'raw-loader' }
-        ],
-        as: '*.js',
+      '.frag': {
+        as: 'js',
+        loaders: ['raw-loader', 'glslify-loader']
       },
-      '*.vert': {
-        loaders: [
-          { loader: 'raw-loader' }
-        ],
-        as: '*.js',
-      },
-      '*.frag': {
-        loaders: [
-          { loader: 'raw-loader' }
-        ],
-        as: '*.js',
-      },
-    },
-  },
+      '.vert': {
+        as: 'js',
+        loaders: ['raw-loader', 'glslify-loader']
+      }
+    }
+  }
 }
 
-const createConfig = (_phase, { defaultConfig: _ }) => {
+const createConfig = (_phase: any, { defaultConfig: _ }: { defaultConfig: any }) => {
   const plugins = [
-    withBundleAnalyzer({ enabled: process.env.ANALYZE === "true" }),
-    withTM([]) // añade los módulos que quieres transpilar aquí
+    withBundleAnalyzer({ enabled: process.env.ANALYZE === 'true' }),
+    withTM([]) // add modules to transpile if needed
   ]
-  return plugins.reduce((acc, plugin) => plugin(acc), { ...config })
+
+  return plugins.reduce((acc, plugin) => plugin(acc), { ...baseConfig })
 }
 
 export default createConfig

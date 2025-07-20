@@ -4,25 +4,24 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
 import { Header } from "~/components/header/header"
+import { siteURL } from "~/lib/constants"
 
 import { AppHooks } from "./app-hooks"
-
-import { siteURL } from "~/lib/constants"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'ogl-starter | theteleporter.site',
-    template: '%s | theteleporter.site'
+    default: "ogl-starter | theteleporter.site",
+    template: "%s | theteleporter.site"
   },
   metadataBase: siteURL,
   description: `A minimalist's boilerplate — OGL with TypeScript.`,
   twitter: {
-    card: 'summary_large_image',
-    title: 'ogl-starter | theteleporter.site',
-    creator: '@theteleporter_',
-    siteId: '@theteleporter_'
+    card: "summary_large_image",
+    title: "ogl-starter | theteleporter.site",
+    creator: "@theteleporter_",
+    siteId: "@theteleporter_"
   }
 }
 
