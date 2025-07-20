@@ -14,7 +14,7 @@ export const Welcome = () => {
       <div className="relative max-w-[900px] mx-auto px-7 z-[1]">
         <div className="p-5 bg-gray/50 rounded-[var(--rounded-lg)] border border-[var(--color-gray-lighter)]">
           <p>
-            👋 Hi there. You are on the basement{" "}
+            👋 Hi there. You are on The Teleporter&#39;s{" "}
             <code className="px-1.5 py-0.5 rounded-[var(--rounded-md)] bg-[var(--color-gray-lighter)]">
               ogl-starter
             </code>{" "}
@@ -25,10 +25,10 @@ export const Welcome = () => {
         <h3 className="mt-8 font-semibold mb-4 text-lg">Links</h3>
         <div className="p-5 bg-gray/50 rounded-[var(--rounded-lg)] border border-[var(--color-gray-lighter)]">
           <p>
-            📝 You can find some utils on our gists notion.&nbsp;
+            🎨 You can find some of my crafts and designs on my site.&nbsp;
             <a
               target="_blank"
-              href="https://basementstudio.notion.site/09383099eb9d415b952af95d5e6a82cc?v=a5d4e739a25a4c3193d7f16e87bdf94e"
+              href="https://theteleporter.site/craft"
               rel="noreferrer"
             >
               Check it out!
@@ -75,12 +75,12 @@ export const Welcome = () => {
           <p>
             From the{" "}
             <a
-              href="https://basement.studio"
+              href="https://theteleporter.site"
               target="_blank"
               rel="noopener"
               style={{ fontWeight: "bold", textDecoration: "none" }}
             >
-              basement.
+              Telecorp.
             </a>
           </p>
         </div>
