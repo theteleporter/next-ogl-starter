@@ -1,6 +1,7 @@
 import type { UrlObject } from "node:url"
 
 import NextLink, { LinkProps as NextLinkProps } from "next/link"
+import type { JSX } from "react"
 import * as React from "react"
 
 import { canPrefetch as defaultCanPrefetch } from "~/lib/utils/can-prefetch"
