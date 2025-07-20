@@ -2,12 +2,12 @@
   "name": "ogl-starter",
   "version": "0.1.0",
   "description": "A starter for OGL projects",
-  "repository": "https://github.com/basementstudio/ogl-starter",
-  "author": "basement.studio",
+  "repository": "https://github.com/theteleporter/next-ogl-starter",
+  "author": "theteleporter.site",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build --turbopack",
     "build:analyze": "cross-env ANALYZE=true pnpm build",
     "start": "next start",
     "lint": "next lint"
