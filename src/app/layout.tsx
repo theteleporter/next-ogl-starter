@@ -7,11 +7,23 @@ import { Header } from "~/components/header/header"
 
 import { AppHooks } from "./app-hooks"
 
+import { siteURL } from "~/lib/constants"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ogl-starter | theteleporter.site",
-  description: "A minimalist's boilerplate — OGL with Next.js & TypeScript."
+  title: {
+    default: 'ogl-starter | theteleporter.site',
+    template: '%s | theteleporter.site'
+  },
+  metadataBase: siteURL,
+  description: `A minimalist's boilerplate — OGL with TypeScript.`,
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ogl-starter | theteleporter.site',
+    creator: '@theteleporter_',
+    siteId: '@theteleporter_'
+  }
 }
 
 export default function RootLayout({
