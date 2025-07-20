@@ -10,7 +10,7 @@ import { AppHooks } from "./app-hooks"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ogl-starter | basement.studio",
+  title: "ogl-starter | theteleporter.site",
   description: "A minimalist's boilerplate — OGL with Next.js & TypeScript."
 }
 
