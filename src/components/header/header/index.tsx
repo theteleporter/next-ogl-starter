@@ -19,28 +19,6 @@ const navLinks: HeaderLink[] = [
 export const Header = () => {
   return (
     <>
-      <Link
-        target="_blank"
-        href="https://foundry.basement.studio/"
-        className="flex relative items-center justify-center gap-2 border-b border-[var(--color-gray-lighter)] h-10 w-full z-over-canvas"
-      >
-        <p className="leading-[1.19rem] tracking-[-0.02em] uppercase text-[max(12px,0.625vw)]">
-          Introducing BASEMENT FOUNDRY. Check it out
-        </p>
-        <svg
-          className="h-3"
-          viewBox="0 0 20 15"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M10.9497 1.56716L15.7542 6.3806L-3.76766e-07 6.3806L-2.78905e-07 8.6194L15.7542 8.6194L10.9497 13.4328L12.514 15L20 7.5L12.514 4.06671e-07L10.9497 1.56716Z"
-            fill="white"
-          />
-        </svg>
-      </Link>
       <div className="sticky w-full top-0 p-0 bg-black/70 z-over-canvas">
         <header className="h-[4.5rem] px-6 flex items-center justify-between z-40 relative border-b border-[var(--color-gray-lighter)]">
           <div className="flex basis-[30%] flex-grow">
